@@ -1,0 +1,22 @@
+# Bank universe: 15 large US bank holding companies and their main bank subsidiaries.
+# FDIC data is reported by the BANK subsidiary (fdic_cert); SEC filings are made by the HOLDING
+# COMPANY (sec_cik). They are different legal entities, so their figures will not match exactly.
+# Identifiers were written from memory: run `python -m bankrisk.cli verify` before ingesting.
+# M&T Bank's legal name in FDIC is 'Manufacturers and Traders Trust Company'.
+# `expected_name_contains` is compared (case-insensitive) with the name FDIC returns for the CERT.
+banks:
+  - {bank_id: JPM,  short_name: JPMorgan Chase,        ticker: JPM,  fdic_cert: 628,   expected_name_contains: JPMorgan,       sec_cik: 19617}
+  - {bank_id: BAC,  short_name: Bank of America,       ticker: BAC,  fdic_cert: 3510,  expected_name_contains: Bank of America, sec_cik: 70858}
+  - {bank_id: WFC,  short_name: Wells Fargo,           ticker: WFC,  fdic_cert: 3511,  expected_name_contains: Wells Fargo,    sec_cik: 72971}
+  - {bank_id: C,    short_name: Citigroup,             ticker: C,    fdic_cert: 7213,  expected_name_contains: Citibank,       sec_cik: 831001}
+  - {bank_id: USB,  short_name: U.S. Bancorp,          ticker: USB,  fdic_cert: 6548,  expected_name_contains: U.S. Bank,      sec_cik: 36104}
+  - {bank_id: PNC,  short_name: PNC Financial,         ticker: PNC,  fdic_cert: 6384,  expected_name_contains: PNC Bank,       sec_cik: 713676}
+  - {bank_id: TFC,  short_name: Truist,                ticker: TFC,  fdic_cert: 9846,  expected_name_contains: Truist,         sec_cik: 92230}
+  - {bank_id: GS,   short_name: Goldman Sachs,         ticker: GS,   fdic_cert: 33124, expected_name_contains: Goldman Sachs,  sec_cik: 886982}
+  - {bank_id: COF,  short_name: Capital One,           ticker: COF,  fdic_cert: 4297,  expected_name_contains: Capital One,    sec_cik: 927628}
+  - {bank_id: FITB, short_name: Fifth Third,           ticker: FITB, fdic_cert: 6672,  expected_name_contains: Fifth Third,    sec_cik: 35527}
+  - {bank_id: RF,   short_name: Regions Financial,     ticker: RF,   fdic_cert: 12368, expected_name_contains: Regions,        sec_cik: 1281761}
+  - {bank_id: KEY,  short_name: KeyCorp,               ticker: KEY,  fdic_cert: 17534, expected_name_contains: KeyBank,        sec_cik: 91576}
+  - {bank_id: HBAN, short_name: Huntington Bancshares, ticker: HBAN, fdic_cert: 6560,  expected_name_contains: Huntington,     sec_cik: 49196}
+  - {bank_id: MTB,  short_name: M&T Bank,              ticker: MTB,  fdic_cert: 588,   expected_name_contains: Manufacturers, sec_cik: 36270}
+  - {bank_id: CFG,  short_name: Citizens Financial,    ticker: CFG,  fdic_cert: 57957, expected_name_contains: Citizens,       sec_cik: 759944}

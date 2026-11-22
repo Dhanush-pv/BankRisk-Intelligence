@@ -1,0 +1,14 @@
+.env
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.py[cod]
+*.egg-info/
+.DS_Store
+Thumbs.db
+# Raw downloads are re-creatable and can be large; only the folder marker is committed
+data/raw/*
+!data/raw/.gitkeep
+# DuckDB database files (Week 2 onwards)
+*.duckdb

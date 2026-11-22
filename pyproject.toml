@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bankrisk"
+version = "0.1.0"
+description = "BankRisk Intelligence: raw data ingestion from FRED, FDIC and SEC EDGAR"
+authors = [{name = "Dhanush"}]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "requests>=2.31,<3.0",
+  "PyYAML>=6.0,<7.0",
+  "python-dotenv>=1.0,<2.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0,<10.0", "ruff>=0.5,<1.0"]
+
+[project.scripts]
+bankrisk = "bankrisk.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src", "tests"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py310"

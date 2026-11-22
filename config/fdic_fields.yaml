@@ -1,0 +1,22 @@
+# Fields requested from the FDIC BankFind /financials endpoint (one record per bank per quarter).
+# Amounts are believed to be in thousands of US dollars; ratios in percent. Confirm both against the
+# FDIC data dictionary in Week 2 before using them. `verify` reports requested fields FDIC did not return.
+max_quarters: 80
+fields:
+  - CERT      # FDIC certificate number
+  - REPDTE    # report date (YYYYMMDD)
+  - ASSET     # total assets
+  - DEP       # total deposits
+  - LNLSGR    # gross loans and leases
+  - LNLSNET   # net loans and leases
+  - LNATRES   # allowance for loan and lease losses
+  - NCLNLS    # noncurrent loans and leases
+  - NTLNLS    # net charge-offs
+  - EQ        # total equity capital
+  - NETINC    # net income
+  - ROA       # return on assets
+  - ROE       # return on equity
+  - NIMY      # net interest margin
+  - RBC1RWAJ  # Tier 1 risk-based capital ratio
+  - RBCRWAJ   # total risk-based capital ratio
+  - RBC1AAJ   # Tier 1 leverage ratio

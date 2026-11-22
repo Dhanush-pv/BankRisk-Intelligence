@@ -1,0 +1,16 @@
+# Macro series pulled from FRED. frequency: D=daily, M=monthly, Q=quarterly.
+# The mix of frequencies is deliberate: Week 3 joins them to quarterly bank data.
+# Series ids come from memory: a wrong id is reported per series in the manifest, it does not stop the run.
+observation_start: "2000-01-01"
+series:
+  - {series_id: FEDFUNDS,  frequency: M, description: Effective federal funds rate}
+  - {series_id: DGS10,     frequency: D, description: 10-year Treasury constant maturity rate}
+  - {series_id: DGS2,      frequency: D, description: 2-year Treasury constant maturity rate}
+  - {series_id: T10Y2Y,    frequency: D, description: 10-year minus 2-year Treasury spread}
+  - {series_id: T10Y3M,    frequency: D, description: 10-year minus 3-month Treasury spread}
+  - {series_id: CPIAUCSL,  frequency: M, description: Consumer Price Index, all urban consumers}
+  - {series_id: UNRATE,    frequency: M, description: Unemployment rate}
+  - {series_id: GDPC1,     frequency: Q, description: Real gross domestic product}
+  - {series_id: DRALACBS,  frequency: Q, description: Delinquency rate on all loans, all commercial banks}
+  - {series_id: DRCCLACBS, frequency: Q, description: Delinquency rate on credit card loans, all commercial banks}
+  - {series_id: DRSFRMACBS, frequency: Q, description: Delinquency rate on single-family residential mortgages, all commercial banks}
